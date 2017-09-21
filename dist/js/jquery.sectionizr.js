@@ -22,7 +22,7 @@
                 };
 
                 if( $(this).data('key').split(',').indexOf(target_elem) == -1 /*$(this).data('key') != target_elem*/ && target_elem != '') {
-                    $(this).animate(
+                    $(this).stop().animate(
                         {
                             width : 0,
                             height : 0
@@ -31,7 +31,7 @@
                         });
                 } else {
                     if( typeof  elem_size[counter] != 'undefined' ) {
-                        $(this).animate(
+                        $(this).stop().animate(
                             {
                                 width : elem_size[counter][0],
                                 height : elem_size[counter][1]
